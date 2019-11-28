@@ -1,21 +1,31 @@
 .block {
-  height: 3vw;
-  width: 3vw;
+  height: 5vw;
+  width: 5vw;
 }
 
 .player {
-  background: red;
-  height: 3vw;
-  width: 2vw;
+  /* background: red; */
+  height: 5vw;
+  width: 1.5vw;
   position: absolute;
+  background-image: url("../media/player.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
-.wall{
-  background: #fff;
+.wall {
+  /* background: #fff; */
+  background-image: url("../media/wall.jfif");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.coin{
+.coin {
   background: goldenrod;
+  background-image: url("../media/coin.jfif");
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 2vw;
   width: 2vw;
   border-radius: 50%;
@@ -24,24 +34,43 @@
   -webkit-animation: 3s linear 0ms infinite both move-coin;
 }
 
-.horizontal-lava{
-  height: 2vw;
+.horizontal-lava,
+.monster {
+  height: 1.5vw;
   background: gold;
   position: absolute; 
   animation: 3s linear 0ms infinite both horizontal-lava;
   -webkit-animation: 3s linear 0ms infinite both horizontal-lava;
 }
 
-.vertical-lava{
-  width: 2vw;
-  background: gold;
+.monster {
+  background-image: url("../media/mon.jfif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  place-self: end;
+}
+
+.horizontal-lava {
+  background-image: url("../media/vertical-lava.jfif");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.vertical-lava {
+  width: 1.5vw;
+  background-image: url("../media/vertical-lava.jfif");
+  background-repeat: no-repeat;
+  background-size: cover;
   position: absolute;
   animation: 3s linear 0ms infinite both vertical-lava;
   -webkit-animation: 3s linear 0ms infinite both vertical-lava;
 }
 
 .static-lava {
-  background: gold;
+  background-image: url("../media/lava.jfif");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .blank-space {

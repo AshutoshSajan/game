@@ -19,7 +19,7 @@ let level =`
   #         | ##      #
   # o                 #
   #     ##      | ##  #
-  # @                ##
+  # @            M   ##
   #####    ##  ####  ##
   #####++++##++####++##
   #####################`;
@@ -54,14 +54,17 @@ rows.forEach(row => {
       
       var horizontalLava = document.createElement("div");
       
-      // var top = space.offsetTop;
-      // var left = space.offsetLeft;
-      
-      // horizontalLava.style.top = top + "px";
-      // horizontalLava.style.left = left + "px";
-      
       horizontalLava.className = "block horizontal-lava " + (i + 1) ;
       space.appendChild(horizontalLava);
+      root.appendChild(space);
+    } else if(v === "M"){
+      var space = document.createElement("div");
+      space.className = "block blank-space " + (i + 1) ;
+      
+      var monster = document.createElement("div");
+
+      monster.className = "block monster " + (i + 1) ;
+      space.appendChild(monster);
       root.appendChild(space);
     } else if(v === "|"){
       var space = document.createElement("div");
@@ -141,7 +144,6 @@ document.addEventListener("keydown", (e) => {
     console.dir(player);
     console.log(y, "arrorw-up");
     player.classList.add("jump");
-    player.style.bottom = "20px";    
   } else {
     return null;
   }
@@ -173,7 +175,7 @@ document.addEventListener("keyup", (e) => {
 
 
 // navigator.userAgent.includes("Android"){
-
+  
 // }
 
 
